@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -13,6 +18,7 @@
 }
 
 .main {
+  flex-grow: 1;
   padding-top: 60px;
 
   @media ($XL) {
@@ -20,7 +26,32 @@
   }
 }
 
-.dummy {
-  height: 100vh;
-  background-color: #255151;
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.h2-title {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: $pan_dark_green;
+
+  @media ($M) {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  @media ($L) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media ($XL) {
+    font-size: 32px;
+    line-height: 35px;
+  }
 }

@@ -1,9 +1,22 @@
 .home {
   background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media ($XL) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 
 .home-top-content {
   border-bottom: 1px solid $pan_grey;
+
+  @media ($XL) {
+    display: flex;
+    flex-grow: 1;
+  }
 }
 
 .home-top-content-col {
@@ -27,6 +40,9 @@
   }
 
   @media ($XL) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding-top: 385px;
     padding-left: 40px;
     padding-bottom: 47px;
