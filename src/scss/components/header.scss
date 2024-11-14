@@ -65,6 +65,7 @@
 }
 
 .header__col2 {
+  position: relative;
   display: flex;
   gap: 32px   ;
   background-color: $pan_dark_green;
@@ -111,6 +112,41 @@
   font-size: 11px;
   line-height: 15px;
   color: $pan_dark_green;
+}
+
+.header__lang-dropdown {
+  display: flex;
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+  height: $header_height_desktop;
+  background-color: #fff;
+  left: 0;
+  bottom: -$header_height_desktop;
+}
+
+.header__lang-dropdown-item {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: $pan_black;
+  text-decoration: none;
+}
+
+//.header__lang:hover {
+//  & .header__lang-dropdown {
+//    display: flex;
+//  }
+//}
+
+.header__lang-dropdown-item_current {
+  text-decoration: underline;
 }
 
 .header--cart {
