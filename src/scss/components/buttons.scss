@@ -1,0 +1,26 @@
+.button {
+  display: block;
+  background-color: #fff;
+  padding: 15.5px 0;
+  width: 320px;
+
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: $pan_dark_green;
+  text-decoration: none;
+  text-align: center;
+
+  &_transparent {
+    background-color: transparent;
+    outline: 1px solid #fff;
+    color: #FFFFFF;
+  }
+
+  &_green {
+    background-color: $pan_dark_green;
+  }
+}

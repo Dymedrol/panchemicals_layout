@@ -1,31 +1,11 @@
 .header {
+  position: fixed;
   display: flex;
   height: 60px;
-  //padding: 0 23px 0 15px;
-
-  @media ($S) {
-
-  }
-
-  @media ($M) {
-
-  }
-
-  @media ($L) {
-    //padding: 0 23px 0 20px;
-  }
+  width: 100%;
 
   @media ($XL) {
     height: 70px;
-    //padding: 0 40px 0 40px;
-  }
-
-  @media ($XXL) {
-
-  }
-
-  @media ($XXXL) {
-
   }
 }
 
@@ -40,16 +20,9 @@
   flex-grow: 1;
   padding-left: 15px;
 
-  @media ($S) {
-
-  }
-
-  @media ($M) {
-
-  }
-
   @media ($L) {
     width: 66.6%;
+    flex-grow: unset;
     padding-left: 20px;
     justify-content: space-between;
   }
@@ -67,31 +40,11 @@
 .header__menu-desktop {
   display: none;
 
-  @media ($S) {
-
-  }
-
-  @media ($M) {
-
-  }
-
-  @media ($L) {
-
-  }
-
   @media ($XL) {
     display: flex;
     justify-content: space-between;
     gap: 40px;
     margin-right: 40px;
-  }
-
-  @media ($XXL) {
-
-  }
-
-  @media ($XXXL) {
-
   }
 }
 
@@ -113,23 +66,15 @@
 
 .header__col2 {
   display: flex;
-  gap: 32px;
+  gap: 32px   ;
   background-color: $pan_dark_green;
   padding-right: 23px;
-
-  @media ($S) {
-
-  }
-
-  @media ($M) {
-
-  }
 
   @media ($L) {
     flex-grow: 1;
     justify-content: flex-end;
     padding-right: 23px;
-    background-color: transparent;
+    background-color: #ffffff03;
     border-bottom: 1px solid  $pan_dark_green;
   }
 
@@ -162,7 +107,7 @@
 .header__lang-text {
   font-family: 'TT Hoves Pro Trial';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 11px;
   line-height: 15px;
   color: $pan_dark_green;
@@ -326,3 +271,72 @@
 .menu-mobile__lang-item_current {
   text-decoration: underline;
 }
+
+.header_white {
+  & .header__col1 {
+    background-color: #fff;
+  }
+
+  & .header__col2 {
+    background-color: #fff;
+
+    @media ($L) {
+      border-bottom: 1px solid #fff;
+      background-color: #ffffff03;
+    }
+  }
+
+  & .header__logo path {
+    fill: $pan_dark_green;
+  }
+
+  & .header__menu-desktop .header__menu--item a {
+    @media ($L) {
+      color: $pan_dark_green;
+    }
+  }
+
+  & .header__search path {
+    @media ($L) {
+      stroke: #fff;
+    }
+  }
+
+  & .header__lang path {
+    @media ($L) {
+      stroke: #fff;
+    }
+  }
+
+  & .header__lang-text {
+    @media ($L) {
+      color: #fff;
+    }
+  }
+
+  & .header--cart path {
+    fill: $pan_dark_green;
+
+    @media ($L) {
+      fill: #fff;
+    }
+  }
+
+  & .header--cart__count {
+    color: $pan_dark_green;
+
+    @media ($L) {
+      color: #fff;
+    }
+  }
+
+  & .header__burger path {
+    stroke: $pan_dark_green;
+
+    @media ($L) {
+      stroke: #fff;
+    }
+  }
+}
+
+

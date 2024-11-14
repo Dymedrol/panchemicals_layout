@@ -11,3 +11,16 @@
     width: 1100px;
   }
 }
+
+.main {
+  padding-top: 60px;
+
+  @media ($XL) {
+    padding-top: 70px;
+  }
+}
+
+.dummy {
+  height: 100vh;
+  background-color: #255151;
+}
