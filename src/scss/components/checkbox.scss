@@ -1,0 +1,66 @@
+.checkbox {
+
+}
+
+.checkbox__label {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+}
+
+.checkbox__input {
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.checkbox__box {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid $pan_dark_green;
+  border-radius: 3px;
+}
+
+.checkbox__input:checked ~ .checkbox__box:after  {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: $pan_dark_green;
+}
+
+.checkbox-text {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: $pan_dark_green;
+}
+
+.catalog-search-bar {
+  @media ($M) {
+
+  }
+
+  @media ($L) {
+
+  }
+
+  @media ($XL) {
+
+  }
+
+  @media ($XXL) {
+
+  }
+}

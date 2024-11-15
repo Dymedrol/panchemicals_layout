@@ -1,0 +1,281 @@
+.catalog {
+
+}
+
+.catalog-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media ($M) {
+    max-width: 690px;
+  }
+
+  @media ($L) {
+    width: 690px;
+    max-width: unset;
+  }
+
+  @media ($XL) {
+    width: 1100px;
+  }
+}
+
+.catalog-header {
+  padding: 20px 15px 20px 15px;
+  border-bottom: 1px solid $pan_dark_green;
+  box-shadow: 0px 0px 50px rgba(37, 81, 81, 0.15);
+
+  @media ($M) {
+    padding: 35px 0 20px;
+  }
+
+  @media ($L) {
+    padding: 20px 0;
+  }
+
+  @media ($XL) {
+    padding: 35px 0 20px;
+  }
+
+  @media ($XXL) {
+    padding: 35px 0 20px;
+  }
+}
+
+.catalog-title {
+  margin-bottom: 26px;
+
+  @media ($M) {
+    margin-bottom: 20px;
+  }
+
+  @media ($L) {
+    margin-bottom: 27px;
+  }
+
+  @media ($XL) {
+    margin-bottom: 20px;
+  }
+
+  @media ($XXL) {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog-header-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media ($M) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+  }
+
+  @media ($L) {
+    margin-bottom: 27px;
+  }
+
+  @media ($XL) {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog-header-controls__sortings {
+  display: flex;
+  gap: 8px;
+}
+
+.catalog-header-controls__sortings-item {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  color: $pan_dark_green;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+
+  height: 32px;
+  background: #FFFFFF;
+  opacity: 0.5;
+  border: 1px solid rgba(6, 66, 76, 0.5);
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+.catalog-header-controls__sortings-item_active {
+  opacity: 1;
+}
+
+.catalog-header-controls-in-stock {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.catalog-abc {
+  display: none;
+
+  @media ($XL) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 20px;
+  }
+}
+
+.catalog-abc__row {
+  display: flex;
+}
+
+.catalog-abc-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: $pan_dark_green;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.catalog-abc-item_active {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.catalog-abc-item_blank {
+  width: 24px;
+}
+
+.catalog-content {
+  padding-top: 10px;
+
+  @media ($M) {
+    padding-top: 20px;
+  }
+
+  @media ($L) {
+    padding-top: 20px;
+  }
+
+  @media ($XL) {
+    padding-top: 40px;
+  }
+}
+
+.catalog-table {
+
+}
+
+.catalog-table-row {
+  display: flex;
+  border-bottom: 1px solid #06424c33;
+  min-height: 52px;
+}
+
+.catalog-table-row:first-of-type {
+  min-height: 40px;
+
+  @media ($XL) {
+    min-height: 46px;
+  }
+}
+
+.catalog-table-col {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  color: $pan_dark_green;
+
+  @media ($XL) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.catalog-table-row:nth-child(1) .catalog-table-col {
+  color: rgba(37, 81, 81, 0.5);
+}
+
+.catalog-table-row:nth-child(1) .catalog-table-col:nth-child(1) {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $pan_dark_green;
+
+  @media ($XL) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.catalog-table-col:nth-child(1) {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  border-right: 1px solid #06424c33;
+}
+
+.catalog-table-col:nth-child(2) {
+  display: none;
+  border-right: 1px solid #06424c33;
+
+  @media ($M) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    gap: 10px;
+  }
+
+  @media ($XL) {
+    width: 150px;
+  }
+}
+.catalog-table-col:nth-child(3) {
+  display: none;
+  border-right: 1px solid #06424c33;
+
+  @media ($M) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+  }
+
+  @media ($XL) {
+    width: 240px;
+  }
+}
+.catalog-table-col:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+
+  @media ($XL) {
+    width: 150px;
+  }
+}
