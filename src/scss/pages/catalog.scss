@@ -1,5 +1,5 @@
 .catalog {
-
+  padding-bottom: 90px;
 }
 
 .catalog-container {
@@ -186,6 +186,30 @@
 
 }
 
+.catalog-table:not(:only-child) {
+  margin-bottom: 20px;
+
+  @media ($XL) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog-table:not(:first-child) {
+  & .catalog-table-row:first-child {
+    & .catalog-table-col:nth-child(2) {
+      display: none;
+    }
+
+    & .catalog-table-col:nth-child(3) {
+      display: none;
+    }
+
+    & .catalog-table-col:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
 .catalog-table-row {
   display: flex;
   border-bottom: 1px solid #06424c33;
@@ -200,7 +224,7 @@
   }
 }
 
-.catalog-table-col {
+.catalog-table-row {
   font-family: 'TT Hoves Pro Trial';
   font-style: normal;
   font-weight: 400;
@@ -213,6 +237,10 @@
     font-size: 14px;
     line-height: 17px;
   }
+}
+
+.catalog-table-col_disabled {
+  opacity: 0.5;
 }
 
 .catalog-table-row:nth-child(1) .catalog-table-col {
@@ -246,6 +274,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 110px;
     gap: 10px;
   }
@@ -262,7 +291,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 110px;
+    text-align: center;
+    text-wrap: pretty;
   }
 
   @media ($XL) {
@@ -273,6 +305,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 110px;
 
   @media ($XL) {
