@@ -312,3 +312,101 @@
     width: 150px;
   }
 }
+
+.catalog-pic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  @media ($M) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog-pic-list__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 150px;
+  background-color: $pan_green;
+  padding: 15px;
+
+  @media ($M) {
+    width: calc(50% - 0.5px);
+  }
+
+  @media ($XL) {
+    padding: 20px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.catalog-pic-list__item-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 1;
+  transition: all 0.5s ease-out;;
+}
+
+.catalog-pic-list__item:hover {
+  & .catalog-pic-list__item-bg {
+    opacity: .15;
+  }
+}
+
+.catalog-pic-list__item-name {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  z-index: 1;
+
+  @media ($XL) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.catalog-pic-list__item-count {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  opacity: 0.5;
+  z-index: 1;
+
+  @media ($XL) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.catalog-pic-list__item-show {
+  font-family: 'TT Hoves Pro Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  z-index: 1;
+
+  margin-top: auto;
+  margin-left: auto;
+}
