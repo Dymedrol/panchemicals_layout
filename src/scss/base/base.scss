@@ -55,3 +55,23 @@ textarea:focus, input:focus{
     line-height: 35px;
   }
 }
+
+.controls {
+  display: none;
+
+  @media ($M) {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: coral;
+    gap: 10px;
+    padding: 10px;
+    bottom: 50px;
+    right: 50px;
+    z-index: 9999;
+  }
+}
+
+.controls-item {
+
+}
